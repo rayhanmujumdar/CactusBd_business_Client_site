@@ -4,11 +4,11 @@ import { Bars2Icon,XMarkIcon } from '@heroicons/react/24/solid'
 import "./Navbar.css";
 
 function Navbar() {
-  const [nav,setNav] = useState(false)
+  const [nav,setNav] = useState(true)
   console.log(nav)
   return (
     <div className="bg-gray-900">
-      <nav className="flex container mx-auto gap-x-5 py-3  text-white">
+      <nav className="flex justify-between container mx-auto gap-x-5 py-3  text-white">
         <div onClick={() => setNav(!nav)} className="md:hidden p-4 ">
           {nav ? <Bars2Icon className="h-6 w-6"></Bars2Icon> : <XMarkIcon className="h-6 w-6"></XMarkIcon>}
         </div>
@@ -23,7 +23,7 @@ function Navbar() {
         </div>
         <ul className={`md:flex gap-x-3 justify-center items-center md:py-0 py-2 md:relative absolute md:bg-none bg-gray-900 p-10 rounded-md ml-1 ${nav ? " md:mt-0 mt-[-300px]" : "md:mt-0 mt-[69px]"} whitespace-nowrap duration-300`}>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li className="p-1 hover:bg-gray-400 hover:duration-300 rounded-md">
             <Link to="/home">About</Link>

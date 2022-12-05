@@ -1,0 +1,19 @@
+.video-container{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.intro_text {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#8BC63B, #449D48);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+.video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
