@@ -5,7 +5,6 @@ import "./Navbar.css";
 
 function Navbar() {
   const [nav,setNav] = useState(true)
-  console.log(nav)
   return (
     <div className="bg-gray-900">
       <nav className="flex justify-between container mx-auto gap-x-5 py-3  text-white">
@@ -13,7 +12,7 @@ function Navbar() {
           {nav ? <Bars2Icon className="h-6 w-6"></Bars2Icon> : <XMarkIcon className="h-6 w-6"></XMarkIcon>}
         </div>
         <div className="w-52">
-          <Link to="/">
+          <Link to="/" >
             <img
               src="../../utils/cactusbd_logo.png"
               alt=""
@@ -26,10 +25,9 @@ function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li className="p-1 hover:bg-gray-400 hover:duration-300 rounded-md">
-            <Link to="/home">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li className="service p-1 duration-300 hover:bg-gray-400 hover:duration-300 rounded-md hover:duration-500">
-            <Link to="/home">
               Service
               <ul className="absolute bg-gray-900 p-3 rounded-md hidden whitespace-nowrap md:ml-6 ml-[130px] ">
                 <li className="py-0.5 px-1 text-lg duration-300 hover:bg-gray-400 hover:duration-300 rounded-sm">
@@ -48,22 +46,21 @@ function Navbar() {
                   <Link to="/logistic">Logistic</Link>
                 </li>
               </ul>
-            </Link>
           </li>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
             <Link to="/home">Blog</Link>
           </li>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
-            <Link to="/home">Client</Link>
+            <Link to="/client">Client</Link>
           </li>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
             <Link to="/job_circulation">Job circulation</Link>
           </li>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
-            <Link to="/home">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
-            <Link to="/home">Career opportunities</Link>
+            <Link to="/career_opportunities">Career opportunities</Link>
           </li>
         </ul>
       </nav>
