@@ -13,7 +13,7 @@ function Navbar() {
           {nav ? <Bars2Icon className="h-6 w-6"></Bars2Icon> : <XMarkIcon className="h-6 w-6"></XMarkIcon>}
         </div>
         <div className="w-52">
-          <Link to="/home">
+          <Link to="/">
             <img
               src="../../utils/cactusbd_logo.png"
               alt=""
@@ -21,7 +21,7 @@ function Navbar() {
             />
           </Link>
         </div>
-        <ul className={`md:flex gap-x-3 justify-center items-center md:py-0 py-2 md:relative absolute md:bg-none bg-gray-900 p-10 rounded-md ml-1 ${nav ? " md:mt-0 mt-[-300px]" : "md:mt-0 mt-[69px]"} whitespace-nowrap duration-300`}>
+        <ul className={`md:flex gap-x-3 justify-center items-center md:py-0 py-2 md:relative absolute z-30 md:bg-none bg-gray-900 p-10 rounded-md ml-1 ${nav ? " md:mt-0 mt-[-300px]" : "md:mt-0 mt-[69px]"} whitespace-nowrap duration-300`}>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
             <Link to="/">Home</Link>
           </li>
@@ -57,7 +57,7 @@ function Navbar() {
             <Link to="/home">Client</Link>
           </li>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
-            <Link to="/home">Job circulation</Link>
+            <Link to="/job_circulation">Job circulation</Link>
           </li>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
             <Link to="/home">Contact</Link>

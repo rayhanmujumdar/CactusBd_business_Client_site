@@ -4,13 +4,19 @@ import { PlayIcon } from "@heroicons/react/24/solid";
 
 function Home() {
   const videoRef = useRef();
-  const [play, getPlay] = useState(false);
+  const [play, getPlay] = useState(true);
+  const [end, getEnd] = useState(false);
   useEffect(() => {
     videoRef.current.pause();
     if (play) {
       videoRef.current.play();
     }
   }, [play]);
+  useEffect(() => {
+    if (end) {
+      getPlay(false);
+    }
+  }, [end]);
   return (
     <div>
       <div
@@ -21,26 +27,35 @@ function Home() {
       >
         <video
           ref={videoRef}
+          onEnded={() => getEnd(true)}
           id="videoRef"
           autoPlay
           src="../../../utils/test_video.mp4"
           playsInline
-          loop
           muted
         ></video>
       </div>
       <div
+        data-aos="fade-up"
         className={`flex justify-center items-center h-[80vh] ${
           play && "hidden"
         }`}
       >
-        <div
-          onClick={() => getPlay(!play)}
+        {!play && <div
+          onClick={() => {
+            getPlay(true)
+            getEnd(false)
+          }}
           className=" text-white cursor-pointer flex justify-center items-center flex-col "
         >
-          <h1  data-aos="fade-up" className="intro_text text-6xl font-bold font-mono">Introduction Of CACTUS BD</h1>
-          <PlayIcon  data-aos="fade-up" className="h-32 w-32 text-[#449D48] animate-ping mt-10"></PlayIcon>
-        </div>
+          <h1 className="intro_text md:text-6xl text-2xl font-bold font-mono">
+            Welcome To Cactus BD
+          </h1>
+          <PlayIcon
+            data-aos="fade-up"
+            className="md:h-32 md:w-32 h-10 w-10 text-[#449D48] animate-ping mt-10"
+          ></PlayIcon>
+        </div>}
       </div>
     </div>
   );
