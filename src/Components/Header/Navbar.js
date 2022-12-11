@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Bars2Icon,XMarkIcon } from '@heroicons/react/24/solid'
 import "./Navbar.css";
+import { NavLink } from "react-router-dom";
+import activeLink from "../utils_Func/activelink";
+
 
 function Navbar() {
   const [nav,setNav] = useState(true)
@@ -12,55 +14,55 @@ function Navbar() {
           {nav ? <Bars2Icon className="h-6 w-6"></Bars2Icon> : <XMarkIcon className="h-6 w-6"></XMarkIcon>}
         </div>
         <div className="w-52">
-          <Link to="/" >
+          <NavLink to="/" >
             <img
               src="../../utils/cactusbd_logo.png"
               alt=""
               className="w-48 h-14"
             />
-          </Link>
+          </NavLink>
         </div>
         <ul className={`md:flex gap-x-3 justify-center items-center md:py-0 py-2 md:relative absolute z-30 md:bg-none bg-gray-900 p-10 rounded-md ml-1 ${nav ? " md:mt-0 mt-[-300px]" : "md:mt-0 mt-[69px]"} whitespace-nowrap duration-300`}>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
-            <Link to="/">Home</Link>
+            <NavLink to="/" className={activeLink}>Home</NavLink>
           </li>
           <li className="p-1 hover:bg-gray-400 hover:duration-300 rounded-md">
-            <Link to="/about">About</Link>
+            <NavLink  to="/about" className={activeLink}>About</NavLink>
           </li>
-          <li className="service p-1 duration-300 hover:bg-gray-400 hover:duration-300 rounded-md hover:duration-500">
+          <li className="service p-1 duration-300 hover:bg-gray-400 hover:duration-300 rounded-md hover:duration-500 cursor-pointer">
               Service
               <ul className="absolute bg-gray-900 p-3 rounded-md hidden whitespace-nowrap md:ml-6 ml-[130px] ">
                 <li className="py-0.5 px-1 text-lg duration-300 hover:bg-gray-400 hover:duration-300 rounded-sm">
-                  <Link to="/event_management">Event Management</Link>
+                  <NavLink to="/event_management" className={activeLink}>Event Management</NavLink>
                 </li>
                 <li className="py-0.5 px-1 text-lg duration-300 hover:bg-gray-400 rounded-sm">
-                <Link to="/digital_printing">Digital Printing</Link>
+                <NavLink to="/digital_printing" className={activeLink}>Digital Printing</NavLink>
                 </li>
                 <li className="py-0.5 px-1 text-lg duration-300 hover:bg-gray-400 rounded-sm">
-                  <Link to="/supply">Supply</Link>
+                  <NavLink to="/supply" className={activeLink}>Supply</NavLink>
                 </li>
                 <li className="py-0.5 px-1 text-lg duration-300 hover:bg-gray-400 rounded-sm">
-                  <Link to="/Interior&Exterior">Interior & Exterior</Link>
+                  <NavLink to="/Interior&Exterior" className={activeLink}>Interior & Exterior</NavLink>
                 </li>
                 <li className="py-0.5 px-1 text-lg duration-300 hover:bg-gray-400 rounded-sm">
-                  <Link to="/logistic">Logistic</Link>
+                  <NavLink to="/logistic" className={activeLink}>Logistic</NavLink>
                 </li>
               </ul>
           </li>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
-            <Link to="/home">Blog</Link>
+            <NavLink to="/blog" className={activeLink}>Blog</NavLink>
           </li>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
-            <Link to="/client">Client</Link>
+            <NavLink to="/client" className={activeLink}>Client</NavLink>
           </li>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
-            <Link to="/job_circulation">Job circulation</Link>
+            <NavLink to="/job_circulation" className={activeLink}>Job circulation</NavLink>
           </li>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
-            <Link to="/contact">Contact</Link>
+            <NavLink to="/contact" className={activeLink}>Contact</NavLink>
           </li>
           <li className="p-1 hover:bg-gray-400 duration-300 hover:duration-300 rounded-md">
-            <Link to="/career_opportunities">Career opportunities</Link>
+            <NavLink to="/career_opportunities" className={activeLink}>Career opportunities</NavLink>
           </li>
         </ul>
       </nav>
