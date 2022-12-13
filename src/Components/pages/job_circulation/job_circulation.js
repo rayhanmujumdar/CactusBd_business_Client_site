@@ -1,6 +1,7 @@
 import React from "react";
 import "./Job_circulation.css"
 import { useForm } from "react-hook-form";
+import RouteLink from "../RouteLink/RouteLink";
 function Job_circulation() {
   const { register, handleSubmit, formState: { errors },reset } = useForm();
   const onSubmit = data => {
@@ -9,7 +10,9 @@ function Job_circulation() {
     reset()
   };
   return (
-    <div className="flex justify-center items-center min-h-[80vh] bg-base-200">
+    <div>
+      <RouteLink pageName="Job Circulation" backRoute="Home" path="job circulation"></RouteLink>
+    <div className="flex justify-center items-center min-h-[80vh] bg-base-200 my-5">
       <div className="hero-content flex-col lg:flex-row-reverse p-0">
       <form onSubmit={handleSubmit(onSubmit)} className="card flex-shrink-0 md:w-[600px] w-[350px] max-w-md shadow-2xl bg-base-100">
           <div className="card-body">
@@ -25,7 +28,7 @@ function Job_circulation() {
                 },
                 required: {
                   value: true,
-                  message: "Must be require"
+                  message: "Name must be require"
                 }
               })}
                 type="text"
@@ -65,6 +68,10 @@ function Job_circulation() {
               </label>
               <input
               {...register("phoneNumber",{
+                required: {
+                  value: true,
+                  message: "Phone number is required"
+                },
                 pattern:{
                   value: /(^(\+88|0088)?(01){1}[3456789]{1}(\d){8})$/,
                   message: "Phone number is not current"
@@ -114,6 +121,7 @@ function Job_circulation() {
           </div>
         </form>
       </div>
+    </div>
     </div>
   );
 }

@@ -6,17 +6,17 @@ function Home() {
   const videoRef = useRef();
   const [play, getPlay] = useState(true);
   const [end, getEnd] = useState(false);
-  // useEffect(() => {
-  //   videoRef.current.pause();
-  //   if (play) {
-  //     videoRef.current.play();
-  //   }
-  // }, [play]);
-  // useEffect(() => {
-  //   if (end) {
-  //     getPlay(false);
-  //   }
-  // }, [end]);
+  useEffect(() => {
+    videoRef.current.pause();
+    if (play) {
+      videoRef.current.play();
+    }
+  }, [play]);
+  useEffect(() => {
+    if (end) {
+      getPlay(false);
+    }
+  }, [end]);
   return (
     <div>
       <div
