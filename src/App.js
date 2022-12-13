@@ -10,7 +10,7 @@ import Contact from "./Components/pages/Contact/Contact";
 function App() {
   AOS.init();
   return (
-    <div>
+    <div className="relative">
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>

@@ -12,7 +12,7 @@ function Job_circulation() {
   return (
     <div>
       <RouteLink pageName="Job Circulation" backRoute="Home" path="job circulation"></RouteLink>
-    <div className="flex justify-center items-center min-h-[80vh] bg-base-200 my-5">
+    <div className="flex justify-center items-center min-h-[80vh] bg-base-200 py-8">
       <div className="hero-content flex-col lg:flex-row-reverse p-0">
       <form onSubmit={handleSubmit(onSubmit)} className="card flex-shrink-0 md:w-[600px] w-[350px] max-w-md shadow-2xl bg-base-100">
           <div className="card-body">
