@@ -2,6 +2,7 @@ import React from "react";
 import "./Job_circulation.css"
 import { useForm } from "react-hook-form";
 import RouteLink from "../RouteLink/RouteLink";
+import Footer from "../../Footer/Footer";
 function Job_circulation() {
   const { register, handleSubmit, formState: { errors },reset } = useForm();
   const onSubmit = data => {
@@ -10,6 +11,7 @@ function Job_circulation() {
     reset()
   };
   return (
+    <>
     <div>
       <RouteLink pageName="Job Circulation" backRoute="Home" path="job circulation"></RouteLink>
     <div className="flex justify-center items-center min-h-[80vh] bg-base-200 py-8">
@@ -123,6 +125,7 @@ function Job_circulation() {
       </div>
     </div>
     </div>
+    </>
   );
 }
 

@@ -6,9 +6,11 @@ import {
   EnvelopeIcon,
   CalendarDaysIcon,
 } from "@heroicons/react/24/solid";
+import Footer from "../../Footer/Footer";
 
 function Contact() {
   return (
+    <>
     <section>
       <RouteLink
         backRoute="Home"
@@ -125,6 +127,7 @@ function Contact() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

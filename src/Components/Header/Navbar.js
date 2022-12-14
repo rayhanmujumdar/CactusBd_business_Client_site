@@ -9,13 +9,13 @@ function Navbar() {
   return (
     <div className="bg-white">
       {!nav && <div onClick={() => setNav(true)} className="md:hidden absolute bg-[rgba(0,0,0,0.5)] w-full min-h-max h-full z-20"></div>}
-      <nav className="flex justify-between container mx-auto gap-x-5 py-3  text-white">
+      <nav className="flex justify-between items-center container mx-auto gap-x-5 py-3  text-white">
         <div onClick={() => setNav(!nav)} className="md:hidden p-4 ">
           {nav && (
             <Bars2Icon className="h-6 w-6 text-black"></Bars2Icon>
           ) }
         </div>
-        <div className="w-52">
+        <div className="lg:w-52 lg:block md:hidden block">
           <NavLink to="/">
             <img
               src="../../utils/cactusbd_logo.png"
@@ -26,7 +26,7 @@ function Navbar() {
         </div>
         <ul
           className={`md:flex gap-x-3 justify-center items-center md:py-0 py-2 md:relative md:bg-white uppercase bg-gray-900  absolute z-30 md:bg-none md:text-black text-white p-10 font-semibold rounded-md ml-1 ${
-            nav ? " md:mt-0 mt-[-400px]" : "md:mt-0 mt-[30px]"
+            nav ? " md:mt-0 mt-[-700px]" : "md:mt-0 mt-[300px]"
           } whitespace-nowrap duration-400`}
         >
           <li onClick={() => setNav(true)} className="mb-5 mt-3 h-8 w-8 duration-300 hover:duration-300 rounded-md">
@@ -73,8 +73,8 @@ function Navbar() {
             </ul>
           </li>
           <li className="p-1 hover:bg-[#051733] hover:text-white duration-300 hover:duration-300 rounded-md">
-            <NavLink to="/blog" className={activeLink}>
-              Blog
+            <NavLink to="/blogs" className={activeLink}>
+              Blogs
             </NavLink>
           </li>
           <li className="p-1 hover:bg-[#051733] hover:text-white duration-300 hover:duration-300 rounded-md">

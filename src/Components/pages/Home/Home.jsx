@@ -18,7 +18,7 @@ function Home() {
     }
   }, [end]);
   return (
-    <div>
+    <div className="h-[91vh]">
       <div
         className={`video-container relative ${
           !play &&
