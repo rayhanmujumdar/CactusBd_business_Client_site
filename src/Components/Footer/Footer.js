@@ -16,7 +16,7 @@ function Footer() {
     <footer className="bg-[#061835] text-white">
       <div className="container mx-auto footer-section">
           {/* business card */}
-          <div className="card-section flex shadow-lg justify-center container mx-auto items-center flex-col bg-white text-black border-l-4 border-[#1D6AED] p-10 ">
+          <div data-aos="fade-up" className="card-section flex shadow-lg justify-center container mx-auto items-center flex-col bg-white text-black border-l-4 border-[#1D6AED] p-10 ">
             <h1 className="text-[#061835] capitalize md:text-4xl text-xl font-bold text-center">
               Level up your <span className="text-[#1D6AED]">business</span>{" "}
               with the finest solutions
@@ -39,7 +39,7 @@ function Footer() {
           </div>
         {/* contact / our products / useful links / work hours */}
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 py-10 items-start md:px-0 px-4">
-          <div>
+          <div data-aos="fade-up">
             <h4 className="font-bold uppercase text-md">Contact us</h4>
             <div className="flex flex-col justify-center gap-y-2">
               {/* icon and address */}
@@ -63,7 +63,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <h4 className="font-bold uppercase text-md">useful links</h4>
             <div className="flex flex-col justify-center gap-y-2">
               <div className="flex items-center gap-x-2">
@@ -98,7 +98,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <h4 className="font-bold uppercase text-md">our products</h4>
             <div className="flex flex-col justify-center gap-y-2">
               <div className="flex items-center gap-x-2">
@@ -127,7 +127,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-center">
+          <div data-aos="fade-up" className="flex flex-col justify-center">
             <h4 className="font-bold uppercase text-md">work hours</h4>
             <p className="text-[#8390A2] text-sm">
               it's time to have the most incredible software experience where
