@@ -5,35 +5,38 @@ import {
   EnvelopeIcon,
   ArrowRightCircleIcon,
   CogIcon,
-  ClockIcon
+  ClockIcon,
 } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
+import "../Footer/Footer.css"
 
 function Footer() {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
   return (
     <footer className="bg-[#061835] text-white">
-      <div className="container mx-auto">
-        {/* business card */}
-        <div className="flex justify-center container mx-auto items-center flex-col bg-white text-black border-l-4 border-[#1D6AED] p-10">
-          <h1 className="text-[#061835] capitalize md:text-4xl text-xl font-bold text-center">
-            Level up your <span className="text-[#1D6AED]">business</span> with
-            the finest solutions
-          </h1>
-          <div className="flex items-center  justify-center relative mt-4">
-            <div className="flex items-center gap-x-2 bg-[#1D6AED] text-white md:px-20 py-4 px-1 cursor-pointer">
-              <PhoneIcon className="md:w-4 md:h-4 w-3 h-3"></PhoneIcon>
-              <p className="font-bold md:text-md text-sm">Schedule a demo</p>
-            </div>
-            <div className="md:block hidden border-4 border-[rgba(0,0,0,0.3)] md:w-12 md:h-12 text-center leading-10 rounded-full absolute right-[288px] bg-white">
-              <p className="md:font-bold">Or</p>
-            </div>
-            <div className="flex items-center justify-center gap-x-2 bg-[#061835] text-white md:px-20 px-1 py-4 cursor-pointer">
-              <CogIcon className="md:w-4 md:h-4 w-3 h-3"></CogIcon>
-              <p className="md:font-bold md:text-md text-sm">company brochure</p>
+      <div className="container mx-auto footer-section">
+          {/* business card */}
+          <div className="card-section flex shadow-lg justify-center container mx-auto items-center flex-col bg-white text-black border-l-4 border-[#1D6AED] p-10 ">
+            <h1 className="text-[#061835] capitalize md:text-4xl text-xl font-bold text-center">
+              Level up your <span className="text-[#1D6AED]">business</span>{" "}
+              with the finest solutions
+            </h1>
+            <div className="flex items-center  justify-center relative mt-4">
+              <div className="flex items-center gap-x-2 bg-[#1D6AED] text-white md:px-20 py-4 px-1 cursor-pointer">
+                <PhoneIcon className="md:w-4 md:h-4 w-3 h-3"></PhoneIcon>
+                <p className="font-bold md:text-md text-sm">Schedule a demo</p>
+              </div>
+              <div className="md:block hidden border-4 border-[rgba(0,0,0,0.3)] md:w-12 md:h-12 text-center leading-10 rounded-full absolute right-[288px] bg-white">
+                <p className="md:font-bold">Or</p>
+              </div>
+              <div className="flex items-center justify-center gap-x-2 bg-[#061835] text-white md:px-20 px-1 py-4 cursor-pointer">
+                <CogIcon className="md:w-4 md:h-4 w-3 h-3"></CogIcon>
+                <p className="md:font-bold md:text-md text-sm">
+                  company brochure
+                </p>
+              </div>
             </div>
           </div>
-        </div>
         {/* contact / our products / useful links / work hours */}
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 py-10 items-start md:px-0 px-4">
           <div>
@@ -125,7 +128,7 @@ function Footer() {
             </div>
           </div>
           <div className="flex flex-col justify-center">
-          <h4 className="font-bold uppercase text-md">work hours</h4>
+            <h4 className="font-bold uppercase text-md">work hours</h4>
             <p className="text-[#8390A2] text-sm">
               it's time to have the most incredible software experience where
               our problem will meet its solution in the most transparent way.So,
@@ -140,7 +143,10 @@ function Footer() {
         {/* copy right */}
         <div className="py-5">
           <div className="w-full bg-gray-500 h-[2px] "></div>
-          <p className="text-sm pt-1 md:px-0 px-2">Copyright © {year},Cactus BD, a concern of Cactus BD. All rights reserved</p>
+          <p className="text-sm pt-1 md:px-0 px-2">
+            Copyright © {year},Cactus BD, a concern of Cactus BD. All rights
+            reserved
+          </p>
         </div>
       </div>
     </footer>

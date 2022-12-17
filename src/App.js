@@ -6,9 +6,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Contact from "./Components/pages/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import About from "./Components/pages/About/About";
 
 function App() {
-  AOS.init();
+  AOS.init({
+    duration: 500,
+    delay: 100
+  });
   return (
     <div className="relative">
       <Navbar></Navbar>
@@ -19,6 +23,7 @@ function App() {
           path="/job_circulation"
           element={<Job_circulation></Job_circulation>}
         ></Route>
+        <Route path="/about" element={<About></About>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

@@ -16,11 +16,11 @@ function Job_circulation() {
       <RouteLink pageName="Job Circulation" backRoute="Home" path="job circulation"></RouteLink>
     <div className="flex justify-center items-center min-h-[80vh] bg-base-200 py-8">
       <div className="hero-content flex-col lg:flex-row-reverse p-0">
-      <form onSubmit={handleSubmit(onSubmit)} className="card flex-shrink-0 md:w-[600px] w-[350px] max-w-md shadow-2xl bg-base-100">
+      <form onSubmit={handleSubmit(onSubmit)} className="card flex-shrink-0 md:w-[600px] w-[350px] max-w-md shadow-2xl bg-[#061835]">
           <div className="card-body">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Your Name</span>
+                <span className="label-text text-white">Your Name</span>
               </label>
               <input
               {...register("name",{
@@ -43,7 +43,7 @@ function Job_circulation() {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text text-white">Email</span>
               </label>
               <input
               {...register("email",{
@@ -66,7 +66,7 @@ function Job_circulation() {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Phone number</span>
+                <span className="label-text text-white">Phone number</span>
               </label>
               <input
               {...register("phoneNumber",{
@@ -89,7 +89,7 @@ function Job_circulation() {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">CV/Resume</span>
+                <span className="label-text text-white">CV/Resume</span>
               </label>
               <input
               {...register("cvFile")}
@@ -100,7 +100,7 @@ function Job_circulation() {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Description</span>
+                <span className="label-text text-white">Description</span>
               </label>
               <textarea
               {...register("description",{
@@ -118,7 +118,7 @@ function Job_circulation() {
               }
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Submit</button>
+              <button className="btn btn-primary bg-[#1D6AED]">Submit</button>
             </div>
           </div>
         </form>
