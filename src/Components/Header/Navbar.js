@@ -102,11 +102,6 @@ function Navbar() {
               </NavLink>
             </li>
             <li className="p-1 hover:bg-[#051733] hover:text-white duration-300 hover:duration-300 rounded-md">
-              <NavLink to="/job_circulation" className={activeLink}>
-                Job circulation
-              </NavLink>
-            </li>
-            <li className="p-1 hover:bg-[#051733] hover:text-white duration-300 hover:duration-300 rounded-md">
               <NavLink to="/contact" className={activeLink}>
                 Contact
               </NavLink>

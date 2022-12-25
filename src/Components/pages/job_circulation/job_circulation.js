@@ -2,18 +2,16 @@ import React from "react";
 import "./Job_circulation.css"
 import { useForm } from "react-hook-form";
 import RouteLink from "../RouteLink/RouteLink";
-import Footer from "../../Footer/Footer";
 function Job_circulation() {
   const { register, handleSubmit, formState: { errors },reset } = useForm();
   const onSubmit = data => {
-    const newData = {...data,cvFile: data.cvFile[0].name}
-    console.log(newData)
+    console.log(data)
     reset()
   };
   return (
     <>
     <div>
-      <RouteLink pageName="Job Circulation" backRoute="Home" path="job circulation"></RouteLink>
+      <RouteLink pageName="career opportunities" backRoute="Home" path="career opportunities"></RouteLink>
     <div className="flex justify-center items-center min-h-[80vh] bg-base-200 py-8">
       <div className="hero-content flex-col lg:flex-row-reverse p-0">
       <form data-aos="fade-left" onSubmit={handleSubmit(onSubmit)} className="card flex-shrink-0 md:w-[600px] w-[350px] max-w-md shadow-2xl bg-[#061835]">
@@ -38,7 +36,7 @@ function Job_circulation() {
                 className="input input-bordered"
               />
               {
-                errors.name && <p className="text-red-400 py-1">{errors?.name.message}</p>
+                errors?.name && <p className="text-red-400 py-1">{errors?.name.message}</p>
               }
             </div>
             <div className="form-control">
@@ -92,11 +90,19 @@ function Job_circulation() {
                 <span className="label-text text-white">CV/Resume</span>
               </label>
               <input
-              {...register("cvFile")}
-                type="file"
-                placeholder="CV"
+              {...register("cvURL",{
+                required: {
+                  value: true,
+                  message: "cv url must be required"
+                }
+              })}
+                type="url"
+                placeholder="CV URL"
                 className="input input-bordered"
               />
+              {
+                errors.cvURL && <p className="text-red-400 py-1">{errors?.cvURL.message}</p>
+              }
             </div>
             <div className="form-control">
               <label className="label">
