@@ -2,10 +2,14 @@ import React from "react";
 import "./Job_circulation.css"
 import { useForm } from "react-hook-form";
 import RouteLink from "../RouteLink/RouteLink";
+import axios from "axios";
 function Job_circulation() {
   const { register, handleSubmit, formState: { errors },reset } = useForm();
   const onSubmit = data => {
-    console.log(data)
+    (async () => {
+      const jobPost = await axios.post("http://localhost:5000/api/v1/jobs/job_circulation",data)
+      console.log(jobPost)
+    })()
     reset()
   };
   return (

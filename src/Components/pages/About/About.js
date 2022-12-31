@@ -26,7 +26,7 @@ function About() {
             <h1 className="text-2xl my-1 font-semibold text-yellow-500">
               We Are....
             </h1>
-            <p className="font-serif text-lg md:text-start text-center">
+            <p className="font-serif text-lg text-justify">
               <span className="font-bold text-xl text-green-800">
                 Cactus BD
               </span>{" "}

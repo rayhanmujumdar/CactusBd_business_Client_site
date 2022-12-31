@@ -2,11 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function BlogsCard({blog}) {
-    console.log(blog)
   return (
-    <div className="card md:w-96 w-[350px] bg-base-100 shadow-xl rounded-sm">
+    <div data-aos="fade-down" className="card md:w-96 w-[350px] bg-base-100 shadow-xl rounded-sm">
       <figure>
-        <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+        <img src={blog.img} alt="Shoes" />
       </figure>
       <div className="card-body p-3">
         <h2 className="text-xl font-bold">
